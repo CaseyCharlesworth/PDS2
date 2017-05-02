@@ -15,8 +15,12 @@ from include.DocumentCollection import *
 
 
 def parse_data_collection():
+
+    # Create new document collection
     collection = DocumentCollection()
+    # Populate the document map with data frames and unique key-sets
     collection.populate_map()
-    collection.print_collection()
+    # Extract vectorised features from the data frames for analysis (non-n-gram model)
+    collection.extract_features()
 
 if __name__ == "__main__": parse_data_collection()
