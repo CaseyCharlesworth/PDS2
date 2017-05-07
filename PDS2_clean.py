@@ -4,14 +4,11 @@
 
 
 import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
 
 files = ["red", "white"]
 var = ["fixed acidity","volatile acidity","citric acid","residual sugar",
        "chlorides","free sulfur dioxide","total sulfur dioxide","density",
        "pH","sulphates","alcohol","quality"]
-output = ["output.csv"]
 
 
 #import file
