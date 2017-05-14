@@ -10,7 +10,7 @@ import numpy as np
 files = ["red", "white"]
 var = ["fixed acidity","volatile acidity","citric acid","residual sugar",
        "chlorides","free sulfur dioxide","total sulfur dioxide","density",
-       "pH","sulphates","alcohol","quality"]
+       "pH","sulphates","alcohol"]
 class_var = ["quality"]
 
 
@@ -51,11 +51,19 @@ for f in files:
     plt.title("Wine quality:  density v pH (" + f + " wine)")
     plt.show()
 
-    wineq.boxplot(column="alcohol", by="quality", grid=False)
+    wineq.plot.hexbin(x="alcohol", y="quality", gridsize=6, colormap="Greens")
     plt.title("Wine quality:  alcohol (%) v quality (" + f + " wine)")
-    plt.ylabel("Alcohol content (%)")
-    plt.xlabel("Quality rating")
     plt.show()
+
+    for v in var:
+        wineq.boxplot(column=v, by=class_var, grid=False)
+        plt.title("Wine quality: " + v + " v quality (" + f + " wine)")
+        plt.ylabel(v)
+        plt.xlabel("Quality rating")
+        plt.show()
+
+    #Finally, get value counts of the class variable to show balance
+    print(wineq["quality"].value_counts())
 
 
 print("Exploration complete")
