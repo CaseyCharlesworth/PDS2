@@ -3,6 +3,9 @@
 #Assignment due 18 May 2017
 
 
+## Task 2: Data exploration ##
+
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np

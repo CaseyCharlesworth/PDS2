@@ -3,6 +3,9 @@
 #Assignment due 18 May 2017
 
 
+## Task 3: Data modelling (and optional extension) ##
+
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
@@ -102,7 +105,8 @@ for f in files:
     #Print classification report (to screen)
     print(cr)
 
-
+    ## Optional extension ##
+    
     #Naive Bayes
     y = wineq.quality.values
     X = wineq[var].values

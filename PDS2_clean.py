@@ -3,6 +3,9 @@
 #Assignment due 18 May 2017
 
 
+## Task 1: Data retrieving ##
+
+
 import pandas as pd
 
 files = ["red", "white"]
